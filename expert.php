@@ -105,3 +105,28 @@ echo login('john@example.be', 'dfgidfgdfg');
 //no access
 echo login('wrong@example.be', 'wrong');
 //you can change things again!
+
+new_exercise(9);
+
+function isLinkValid(string $link) {
+    $unacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
+    $valid=0;
+    foreach ($unacceptables as $unacceptable) {
+        if (strpos($link, $unacceptable) !== false) {
+           echo 'Unacceptable Found<br />';
+           $valid= $valid+1;
+        }
+    }
+    if ($valid==0){echo 'Acceptable<br />';}
+}
+//invalid link
+isLinkValid('http://www.google.com/hack.pdf');
+//invalid link
+isLinkValid('https://google.com');
+//VALID link
+isLinkValid('http://google.com');
+//VALID link
+isLinkValid('http://google.com/test.txt');
+
+
+
