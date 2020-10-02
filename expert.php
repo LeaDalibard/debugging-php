@@ -32,3 +32,12 @@ foreach($week as &$day) {
 }
 
 print_r($week);
+
+new_exercise(5);
+
+$arr = [];
+for ($letter = 'a'; $letter != 'aa'; $letter++) {
+    array_push($arr, $letter);
+}
+
+print_r($arr);
