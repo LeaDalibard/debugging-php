@@ -24,3 +24,11 @@ echo $monday;
 new_exercise(3);
 $str ='Debugged ! Also very fun';
 echo substr($str, 0, 10);
+
+new_exercise(4);
+
+foreach($week as &$day) {
+    $day = substr($day, 0, strlen($day)-3);
+}
+
+print_r($week);
